@@ -48,6 +48,8 @@ This guide collects real, publicly documented case studies of people who built p
 
 **Overlap:** ~150 characters (roughly 1–2 sentences) to preserve context across paragraph breaks.
 
+**Final chunk count:** 236 chunks across 12 documents (avg ~656 chars/chunk, max under the 1,000-char embedding limit).
+
 **Reasoning:** The corpus is heterogeneous — short single-story posts (~600 words), long multi-section deep-dives (~5,800 words), and two "roundup" pages that each pack ~10 unrelated mini-case-studies. A purely fixed-size split would merge two different founders' numbers into one chunk on the roundup pages, producing confused retrieval. So the splitter breaks on Markdown headings first (`##` / `####`), then paragraphs, then sentences, falling back to character count only when a section exceeds the target size. This isolates each case study while keeping chunks within the embedding model's window. Frontmatter is parsed for metadata (title, source URL) and then stripped from the chunkable body.
 
 ---
