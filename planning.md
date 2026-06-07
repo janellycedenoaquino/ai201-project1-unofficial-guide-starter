@@ -11,6 +11,8 @@
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
 
+This guide covers real, publicly documented case studies of people who built automated or semi-automated income streams and shared their actual revenue numbers — indie hackers, solo founders, and automation consultants. The valuable detail (what they built, which tools they used, how long it took to reach sustainable income, and what failed) is scattered across Indie Hackers posts, eBiz Facts roundups, and founder interviews rather than collected anywhere official — and official "make money online" sources are usually generic or trying to sell you something. A RAG system over these verified first-hand accounts surfaces patterns across them that no single article makes obvious.
+
 ---
 
 ## Documents
