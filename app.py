@@ -23,6 +23,17 @@ def handle_query(question: str) -> tuple[str, str]:
     return result.text, sources
 
 
+# Custom styling: brand the primary button dark teal.
+CSS = """
+#ask-btn {
+    background: #0D3B3C !important;
+    background-image: none !important;
+    border-color: #0D3B3C !important;
+    color: #ffffff !important;
+}
+#ask-btn:hover { background: #0a2e2f !important; border-color: #0a2e2f !important; }
+"""
+
 with gr.Blocks(title="The Unofficial Guide") as demo:
     gr.Markdown(
         "# The Unofficial Guide\n"
@@ -33,7 +44,7 @@ with gr.Blocks(title="The Unofficial Guide") as demo:
         label="Your question",
         placeholder="e.g. What business models did these founders use to make money?",
     )
-    ask_btn = gr.Button("Ask", variant="primary")
+    ask_btn = gr.Button("Ask", variant="primary", elem_id="ask-btn")
     answer_box = gr.Textbox(label="Answer", lines=8)
     sources_box = gr.Textbox(label="Sources", lines=4)
 
@@ -43,4 +54,4 @@ with gr.Blocks(title="The Unofficial Guide") as demo:
 
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(css=CSS)
